@@ -56,7 +56,7 @@ public class CustomList extends ArrayAdapter<City> {
         Collections.sort(list);
         return list;
     }
-
+    
     /**
      * this gets size of the list
      * @return
@@ -94,7 +94,11 @@ public class CustomList extends ArrayAdapter<City> {
      * this is the city that is to be deleted
      */
     public void delete(City city){
-
+        if (!cities.contains(city)) {
+            throw new IllegalArgumentException();
+        } else {
+            cities.remove(city);
+        }
     }
 
 
