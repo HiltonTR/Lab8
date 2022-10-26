@@ -87,27 +87,26 @@ public class CustomList extends ArrayAdapter<City> {
             return false;
         }
     }
-/*
-    /**
-     * This deletes the city from the list
-     * @param city
-     * this is the city that is to be deleted
-     */
-    public void delete(City city){
-        if (!cities.contains(city)) {
-            throw new IllegalArgumentException();
-        } else {
-            cities.remove(city);
-        }
-    }
 
-    /**
-     * This returns the count of the cities
-     * @return
-     * returns the number of cities in the list
-     */
-    public int countCities(){
-        return cities.size()-1;
-    }
-    */
+//    /**
+//     * This deletes the city from the list
+//     * @param city
+//     * this is the city that is to be deleted
+//     */
+//    public void delete(City city){
+//        if (!cities.contains(city)) {
+//            throw new IllegalArgumentException();
+//        } else {
+//            cities.remove(city);
+//        }
+//    }
+//
+//    /**
+//     * This returns the count of the cities
+//     * @return
+//     * returns the number of cities in the list
+//     */
+//    public int countCities(){
+//        return cities.size()-1;
+//    }
 }
