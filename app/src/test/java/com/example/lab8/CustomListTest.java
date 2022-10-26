@@ -40,34 +40,15 @@ public class CustomListTest {
     }
 
     @Test
-    void testHasCity(){
+    void testHasCity() {
         list = MockCityList();
-        list.addCity(new City("Estevan", "SK"));
-        list.hasCity(new City("Estevan", "SK"));
-        assertTrue(list.hasCity(new City("Estevan", "SK")));
-        assertFalse(list.hasCity(new City("Charlottetown", "Prince Edward Island")));
-    }
-    @Test
-    void testDelete(){
-        list = MockCityList();
-        City city = new City("Yellowknife", "Northwest Territories");
-        assertThrows( IllegalArgumentException.class, () -> {
-            list.delete(city); });
+        City city = new City("Regina", "Saskatchewan");
         list.addCity(city);
-        assertTrue(list.getCities().contains(city));
-        assertEquals(2, list.getCities().size());
-        list.delete(city);
-        assertFalse(list.getCities().contains(city));
-        assertEquals(1, list.getCities().size());
-    }
-    @Test
-    void testCountCities(){
-        list = MockCityList();
-        City city = new City("Yellowknife", "Northwest Territories");
-        list.addCity(city);
-        assertEquals(1, list.countCities());
-        city = new City("Charlottetown", "Prince Edward Island");
-        list.addCity(city);
-        assertEquals(2, list.countCities());
+        boolean test = list.hasCity(city);
+        assertEquals(true, test);
+
+        City city2 = new City("Edmonton", "Alberta");
+        boolean test2 = list.hasCity(city2);
+        assertEquals(false, test2);
     }
 }
