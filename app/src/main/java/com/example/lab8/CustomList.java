@@ -88,18 +88,18 @@ public class CustomList extends ArrayAdapter<City> {
         }
     }
 
-//    /**
-//     * This deletes the city from the list
-//     * @param city
-//     * this is the city that is to be deleted
-//     */
-//    public void delete(City city){
+    /**
+     * This deletes the city from the list
+     * @param city
+     * this is the city that is to be deleted
+     */
+    public void delete(City city){
 //        if (!cities.contains(city)) {
 //            throw new IllegalArgumentException();
 //        } else {
 //            cities.remove(city);
 //        }
-//    }
+    }
 //
 //    /**
 //     * This returns the count of the cities
