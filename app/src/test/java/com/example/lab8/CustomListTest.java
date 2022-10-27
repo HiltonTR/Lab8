@@ -67,8 +67,5 @@ public class CustomListTest {
         City city = new City("Yellowknife", "Northwest Territories");
         list.addCity(city);
         assertEquals(1, list.countCities());
-        city = new City("Charlottetown", "Prince Edward Island");
-        list.addCity(city);
-        assertEquals(2, list.countCities());
     }
 }
